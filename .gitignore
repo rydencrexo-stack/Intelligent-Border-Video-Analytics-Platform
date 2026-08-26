@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+*.db
+*.sqlite
+*.sqlite3
+uploads/*
+evidence/*
+models/*.pt
+models/*.onnx
+models/*.engine
+node_modules/
+frontend/dist/
+*.log
+.vscode/
