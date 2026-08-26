@@ -1,4 +1,31 @@
+import { useState } from "react";
+
 function LiveMonitoring() {
+  const cameras = [
+    {
+      id: "CAM-01",
+      name: "Camera 01",
+      location: "Main Border Gate",
+    },
+    {
+      id: "CAM-02",
+      name: "Camera 02",
+      location: "Border Sector A",
+    },
+    {
+      id: "CAM-03",
+      name: "Camera 03",
+      location: "Vehicle Checkpoint",
+    },
+    {
+      id: "CAM-04",
+      name: "Camera 04",
+      location: "Border Sector B",
+    },
+  ];
+
+  const [selectedCamera, setSelectedCamera] = useState(cameras[0]);
+
   return (
     <div className="page">
 
@@ -15,6 +42,7 @@ function LiveMonitoring() {
       </header>
 
       <section className="stats">
+
         <div className="stat-card">
           <span>Active Cameras</span>
           <strong>12</strong>
@@ -38,70 +66,75 @@ function LiveMonitoring() {
           <strong>11</strong>
           <small>Currently streaming</small>
         </div>
+
       </section>
 
       <section className="modules">
 
         <h2>Border Cameras</h2>
 
-        <div className="module-grid">
+        <div className="live-camera-grid">
 
-          <div className="module-card">
-            <span>📹</span>
-            <h3>Camera 01</h3>
-            <p>Main Border Gate</p>
-            <small>● LIVE</small>
-          </div>
+          {cameras.map((camera) => (
+            <div
+              key={camera.id}
+              className={`live-camera-card ${
+                selectedCamera.id === camera.id ? "active" : ""
+              }`}
+              onClick={() => setSelectedCamera(camera)}
+            >
+              <div className="live-camera-icon">📹</div>
 
-          <div className="module-card">
-            <span>📹</span>
-            <h3>Camera 02</h3>
-            <p>Border Sector A</p>
-            <small>● LIVE</small>
-          </div>
+              <h3>{camera.name}</h3>
 
-          <div className="module-card">
-            <span>📹</span>
-            <h3>Camera 03</h3>
-            <p>Vehicle Checkpoint</p>
-            <small>● LIVE</small>
-          </div>
+              <p>{camera.location}</p>
 
-          <div className="module-card">
-            <span>📹</span>
-            <h3>Camera 04</h3>
-            <p>Border Sector B</p>
-            <small>● LIVE</small>
-          </div>
+              <small>● LIVE</small>
+            </div>
+          ))}
 
         </div>
 
       </section>
 
-      <section className="content-grid">
+      <section className="live-preview">
 
         <div className="camera-panel">
 
           <div className="panel-header">
+
             <div>
-              <h2>Camera 01</h2>
-              <span>Main Border Gate</span>
+              <h2>{selectedCamera.name}</h2>
+              <span>{selectedCamera.location}</span>
             </div>
 
-            <span className="live-badge">● LIVE</span>
+            <span className="live-badge">
+              ● LIVE
+            </span>
+
           </div>
 
           <div className="camera-screen">
 
             <div className="camera-overlay">
-              <span>CAM-01</span>
+              <span>{selectedCamera.id}</span>
               <span>LIVE</span>
             </div>
 
             <div className="camera-message">
-              <div className="camera-icon">◉</div>
-              <h3>Live Video Feed</h3>
-              <p>Camera stream will appear here</p>
+
+              <div className="camera-icon">
+                ◉
+              </div>
+
+              <h3>
+                Live Video Feed
+              </h3>
+
+              <p>
+                {selectedCamera.name} stream will appear here
+              </p>
+
             </div>
 
           </div>
