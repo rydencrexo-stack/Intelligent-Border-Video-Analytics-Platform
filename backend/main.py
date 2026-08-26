@@ -1,7 +1,13 @@
 from fastapi import FastAPI
+from backend.api.routes import router
 
-app = FastAPI(title="Intelligent Border Video Analytics Platform")
+app = FastAPI(title="IBVAP")
+
+app.include_router(router, prefix="/api")
 
 @app.get("/")
 def root():
-    return {"status": "IBVAP backend is running"}
+    return {
+        "project": "IBVAP",
+        "status": "online"
+    }
