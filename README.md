@@ -113,6 +113,9 @@ Provide surveillance statistics, detection information, and security-event analy
 ---
 
 # 📁 Project Structure
+
+```text
+
 Intelligent-Border-Video-Analytics-Platform/
 │
 ├── backend/
@@ -186,42 +189,43 @@ Intelligent-Border-Video-Analytics-Platform/
 ├── .gitignore
 └── README.md
 
+```
 ----
 
-🖥️ Dashboard Modules
-Module	Purpose
-🏠 Dashboard	Overall border surveillance overview
-📹 Live Monitoring	Monitor surveillance cameras
-🚨 Intrusion Detection	Detect restricted-zone activity
-🔔 Alerts	Manage security events
-🚗 ANPR	Detect and process number plates
-🎯 Tracking	Track people and vehicles
-📊 Analytics	Analyze surveillance data
-🔮 Future Enhancements
-🎥 Real-time CCTV/RTSP stream integration
-🤖 Advanced AI object detection
-🧠 Intelligent threat classification
-🚗 Real-time ANPR pipeline
-🎯 Multi-camera object tracking
-🚨 Real-time alert notifications
-🗄️ Complete database integration
-📊 Advanced analytics and reporting
-🔐 Role-based authentication
-☁️ Cloud deployment
-📱 Mobile monitoring interface
-🗺️ Geographic border-zone visualization
-🏆 Smart India Hackathon
+# 🖥️ Dashboard Modules
+- Module	Purpose
+- 🏠 Dashboard	Overall border surveillance overview
+- 📹 Live Monitoring	Monitor surveillance cameras
+- 🚨 Intrusion Detection	Detect restricted-zone activity
+- 🔔 Alerts	Manage security events
+- 🚗 ANPR	Detect and process number plates
+- 🎯 Tracking	Track people and vehicles
+- 📊 Analytics	Analyze surveillance data
+- 🔮 Future Enhancements
+- 🎥 Real-time CCTV/RTSP stream integration
+- 🤖 Advanced AI object detection
+- 🧠 Intelligent threat classification
+- 🚗 Real-time ANPR pipeline
+- 🎯 Multi-camera object tracking
+- 🚨 Real-time alert notifications
+- 🗄️ Complete database integration
+- 📊 Advanced analytics and reporting
+- 🔐 Role-based authentication
+- ☁️ Cloud deployment
+- 📱 Mobile monitoring interface
+- 🗺️ Geographic border-zone visualization
+- 🏆 Smart India Hackathon
 
 This project is being developed as a Smart India Hackathon (SIH) project focused on intelligent surveillance, computer vision, video analytics, and security automation.
 
-👨‍💻 Author
+# 👨‍💻 Author
 
 Atharva A. Deshmukh
 This platform is intended for authorized security, research, educational, and controlled surveillance environments.
 
 Deployment should comply with applicable privacy, surveillance, data-protection, and cybersecurity regulations.
 
-⭐ Support
+# ⭐ Support
 
 If you find this project interesting, consider giving the repository a ⭐ and following the development journey.
 
