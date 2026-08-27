@@ -6,21 +6,25 @@ function LiveMonitoring() {
       id: "CAM-01",
       name: "Camera 01",
       location: "Main Border Gate",
+      stream: "http://127.0.0.1:8000/api/video/demo",
     },
     {
       id: "CAM-02",
       name: "Camera 02",
       location: "Border Sector A",
+      stream: "http://127.0.0.1:8000/api/video/demo",
     },
     {
       id: "CAM-03",
       name: "Camera 03",
       location: "Vehicle Checkpoint",
+      stream: "http://127.0.0.1:8000/api/video/demo",
     },
     {
       id: "CAM-04",
       name: "Camera 04",
       location: "Border Sector B",
+      stream: "http://127.0.0.1:8000/api/video/demo",
     },
   ];
 
@@ -46,25 +50,25 @@ function LiveMonitoring() {
         <div className="stat-card">
           <span>Active Cameras</span>
           <strong>12</strong>
-          <small>All systems operational</small>
+          <small>Configured cameras</small>
         </div>
 
         <div className="stat-card">
-          <span>Online Cameras</span>
-          <strong>11</strong>
+          <span>Demo Stream</span>
+          <strong>01</strong>
           <small>Connected</small>
         </div>
 
         <div className="stat-card warning">
           <span>Offline Cameras</span>
-          <strong>01</strong>
-          <small>Requires attention</small>
+          <strong>11</strong>
+          <small>Not connected yet</small>
         </div>
 
         <div className="stat-card">
-          <span>Live Streams</span>
-          <strong>11</strong>
-          <small>Currently streaming</small>
+          <span>Video Source</span>
+          <strong>MP4</strong>
+          <small>Demo Mode</small>
         </div>
 
       </section>
@@ -89,7 +93,7 @@ function LiveMonitoring() {
 
               <p>{camera.location}</p>
 
-              <small>● LIVE</small>
+              <small>● DEMO</small>
             </div>
           ))}
 
@@ -109,7 +113,7 @@ function LiveMonitoring() {
             </div>
 
             <span className="live-badge">
-              ● LIVE
+              ● DEMO
             </span>
 
           </div>
@@ -118,24 +122,19 @@ function LiveMonitoring() {
 
             <div className="camera-overlay">
               <span>{selectedCamera.id}</span>
-              <span>LIVE</span>
+              <span>DEMO MODE</span>
             </div>
 
-            <div className="camera-message">
-
-              <div className="camera-icon">
-                ◉
-              </div>
-
-              <h3>
-                Live Video Feed
-              </h3>
-
-              <p>
-                {selectedCamera.name} stream will appear here
-              </p>
-
-            </div>
+            <img
+              src={selectedCamera.stream}
+              alt={`${selectedCamera.name} surveillance stream`}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+                display: "block",
+              }}
+            />
 
           </div>
 
