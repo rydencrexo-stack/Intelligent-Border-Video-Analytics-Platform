@@ -3,6 +3,8 @@
 > An AI-powered intelligent border surveillance and video analytics platform for real-time monitoring, threat detection, vehicle analysis, object tracking, and security alerts.
 
 ---
+https://prod.liveshare.vsengsaas.visualstudio.com/join?DD5C8EF78F51C5A661FE434CE58D1AB17C46
+---
 
 ## 📌 Project Overview
 
